@@ -1,0 +1,5 @@
+x.bat
+x.bat.bak
+vim.exe.stackdump
+server.log
+node_modules
