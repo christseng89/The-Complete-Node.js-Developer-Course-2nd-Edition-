@@ -5,11 +5,12 @@
   "main": "index.js",
   "scripts": {
     "test": "mocha **/*.test.js",
-    "test-watch": "nodemon --exec 'npm test'"
+    "test-watch": "nodemon --exec \"npm test\""
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "mocha": "^3.0.0"
-  }
+  },
+  "dependencies": {}
 }

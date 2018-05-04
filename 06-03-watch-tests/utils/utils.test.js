@@ -15,3 +15,11 @@ it('should square a number', () => {
     throw new Error(`Expected 9, but got ${res}.`);
   }
 });
+
+it('should working properly', () => {
+  var res = utils.square(3) + utils.add (5, 6);
+
+  if (res !== 20) {
+    throw new Error(`Expected 20, but got ${res}.`);
+  }
+});
