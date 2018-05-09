@@ -4,13 +4,14 @@ const request = require('supertest');
 const {app} = require('./../server');
 const {Todo} = require('./../models/todo');
 
+//# Initial DB and remove all records in MongoDB
 beforeEach((done) => {
   Todo.remove({}).then(() => done());
 });
 
 describe('POST /todos', () => {
   it('should create a new todo', (done) => {
-    var text = 'Test todo text';
+    var text = 'This is a Test Text';
 
     request(app)
       .post('/todos')
@@ -18,6 +19,7 @@ describe('POST /todos', () => {
       .expect(200)
       .expect((res) => {
         expect(res.body.text).toBe(text);
+        console.log(res.body.text);
       })
       .end((err, res) => {
         if (err) {
