@@ -6,7 +6,6 @@ mongoose.connect('mongodb://localhost:27017/TodoApp', {
   /* other options */
 });
 // mongoose.connect('mongodb://localhost:27017/TodoApp');
-console.log('A');
 
 var Todo = mongoose.model('Todo', {
   text: {

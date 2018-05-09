@@ -8,6 +8,9 @@ var {User} = require('./models/user');
 var app = express();
 
 app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
+  extended: true
+})); 
 
 app.post('/todos', (req, res) => {
   var todo = new Todo({
