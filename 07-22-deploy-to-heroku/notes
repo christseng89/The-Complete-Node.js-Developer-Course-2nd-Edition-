@@ -1,0 +1,15 @@
+git remote remove heroku
+heroku create
+heroku addons:create mongolab:sandbox
+heroku config
+
+cd ..
+git commit -am "07-22"
+git push
+
+cd 07-22*
+git push heroku master
+heroku logs
+
+# Using Postman with hyperlink https://.../todos to post a record
+# Using Browser with hyperlink https://.../todos to manipulate
