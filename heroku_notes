@@ -1,13 +1,13 @@
-git remote remove heroku
-heroku create
-heroku addons:create mongolab:sandbox
-heroku config
-
 cd ..
 git commit -am "07-22"
 git push
 
 cd 07-22*
+git remote remove heroku
+heroku create
+heroku addons:create mongolab:sandbox
+heroku config
+
 git push heroku master
 heroku logs
 
