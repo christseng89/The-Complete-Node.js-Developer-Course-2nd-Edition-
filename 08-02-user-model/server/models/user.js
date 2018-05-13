@@ -18,6 +18,7 @@ var User = mongoose.model('User', {
     minlength: 1,
     unique: true,
     validate: {
+      isAsync: true,      
       validator: validator.isEmail,
       message: '{VALUE} is not a valid email'
     }
