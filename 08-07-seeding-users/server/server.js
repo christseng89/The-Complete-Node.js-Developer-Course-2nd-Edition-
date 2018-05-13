@@ -1,4 +1,5 @@
-require('./config/config');
+const {env} = require('./config/config');
+console.log('Env ...', env);
 
 const _ = require('lodash');
 const express = require('express');
