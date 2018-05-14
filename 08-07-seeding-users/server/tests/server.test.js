@@ -6,7 +6,7 @@ const {app} = require('./../server');
 const {Todo} = require('./../models/todo');
 const {todos, populateTodos, users, populateUsers} = require('./seed/seed');
 
-beforeEach(populateUsers);
+beforeEach(populateUsers); 
 beforeEach(populateTodos);
 
 describe('POST /todos', () => {
