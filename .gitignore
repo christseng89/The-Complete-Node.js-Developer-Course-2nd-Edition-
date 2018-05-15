@@ -5,3 +5,4 @@ package-lock.json
 server.log
 node_modules/
 config.json
+heroku_notes
