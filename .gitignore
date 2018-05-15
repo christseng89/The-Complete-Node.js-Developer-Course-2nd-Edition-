@@ -4,3 +4,4 @@ vim.exe.stackdump
 package-lock.json
 server.log
 node_modules/
+config.json
