@@ -11,7 +11,7 @@ heroku config:set NAME=Chris
 heroku config
 heroku config:get NAME
 heroku config:unset NAME
-heroku config:JWT_SECRET=johnny&eric&chris&cs
+heroku config:set JWT_SECRET=johnny1_eric2_chris3_cs4
 
 git push heroku master
 heroku logs
