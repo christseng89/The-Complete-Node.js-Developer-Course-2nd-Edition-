@@ -9,6 +9,8 @@ heroku addons:create mongolab:sandbox
 heroku config
 heroku config:set NAME=Chris
 heroku config
+heroku config:get NAME
+heroku config:unset NAME
 
 git push heroku master
 heroku logs
