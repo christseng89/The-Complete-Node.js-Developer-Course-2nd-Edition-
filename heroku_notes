@@ -18,3 +18,5 @@ heroku logs
 
 # Using Postman with hyperlink https://.../todos to post a record
 # Using Browser with hyperlink https://.../todos to manipulate
+# MONGODB_URI: mongodb://heroku_lbl4q2z2:1jlkkms9n7cpah4gtivpjmigc3@ds223760.mlab.com:23760/heroku_lbl4q2z2
+# ... //username:password@server:port/dbname
