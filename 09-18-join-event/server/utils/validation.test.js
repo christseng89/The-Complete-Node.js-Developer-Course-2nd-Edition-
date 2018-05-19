@@ -17,4 +17,10 @@ describe('isRealString', () => {
     var res = isRealString('D');
     expect(res).toBe(true);
   });
+
+  it('should allow string with numbers', () => {
+    var res = isRealString('11');
+    expect(res).toBe(true);
+  });
+
 });
