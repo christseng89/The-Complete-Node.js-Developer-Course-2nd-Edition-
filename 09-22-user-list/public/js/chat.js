@@ -34,6 +34,7 @@ socket.on('disconnect', function () {
 });
 
 socket.on('updateUserList', function (users) {
+  console.log('User List: . . . ', users)
   var ol = jQuery('<ol></ol>');
 
   users.forEach(function (user) {
@@ -44,7 +45,7 @@ socket.on('updateUserList', function (users) {
 });
 
 socket.on('newMessage', function (message) {
-  var formattedTime = moment(message.createdAt).format('h:mm a');
+  var formattedTime = moment(message.createdAt).format('h:mm:ss a');
   var template = jQuery('#message-template').html();
   var html = Mustache.render(template, {
     text: message.text,
@@ -57,7 +58,7 @@ socket.on('newMessage', function (message) {
 });
 
 socket.on('newLocationMessage', function (message) {
-  var formattedTime = moment(message.createdAt).format('h:mm a');
+  var formattedTime = moment(message.createdAt).format('h:mm:ss a');
   var template = jQuery('#location-message-template').html();
   var html = Mustache.render(template, {
     from: message.from,
