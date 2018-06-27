@@ -2,3 +2,12 @@ Hello ChrisTseng!
 IP Address 10.39.101.9 
 Hello ChrisTseng! 
 IP Address 10.39.101.9 
+Hello ChrisTseng! 
+Path C:\Users\Chris Tseng 
+IP Address 10.39.101.9 
+Hello ChrisTseng! 
+Hostname CHRIS-SFPRO Path C:\Users\Chris Tseng 
+IP Address 10.39.101.9 
+Hello ChrisTseng! 
+Hostname CHRIS-SFPRO, Path C:\Users\Chris Tseng 
+IP Address 10.39.101.9 
