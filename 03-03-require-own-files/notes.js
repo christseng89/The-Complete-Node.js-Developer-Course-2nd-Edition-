@@ -1,13 +1,15 @@
 console.log('Starting notes.js');
 //console.log(module);
 
-module.exports.addNote = () => {
+const addNote = () => {
   console.log('addNote');
   return 'New note';
 };
 
-module.exports.add = (a, b) => {
+const add = (a, b) => {
   return a + b;
 };
 
-module.exports.age = 25;
+const age = 25;
+
+module.exports = {add, addNote, age}
