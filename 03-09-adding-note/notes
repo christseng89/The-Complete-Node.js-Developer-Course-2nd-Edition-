@@ -1,0 +1,4 @@
+node app.js add --title="Security" --body="Some Body here..."
+node app.js add --title="Security 2" --body="Some Bo"Security 2" --body="Some Body 2 here..."
+node app.js list
+node app.js read --title="Security"
