@@ -8,8 +8,10 @@ const notes = require('./notes.js');
 
 const argv = yargs.argv;
 var command = argv._[0];
+console.log (argv)
 console.log('Yargs Command: ', command);
 console.log('Yargs Title: ', argv.title);
+console.log('Yargs Body : ', argv.body)
 //console.log('Yargs: ', argv);
 
 // var title = process.argv[3];
