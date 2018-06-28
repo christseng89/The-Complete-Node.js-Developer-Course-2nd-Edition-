@@ -1,44 +1,62 @@
-console.log('Starting notes.js');
+console.log('Starting notes.js', '\n')
+const fs = require('fs')
 
-const fs = require('fs');
-
-var addNote = (title, body) => {
-  var notes = [];
+const addNote = (title, body) => {
+  var notes = []
   var note = {
     title,
     body
-  };
+  }
 
   try {
-    var notesString = fs.readFileSync('notes-data.json');
-    notes = JSON.parse(notesString);
+    // var notesString = fs.readFileSync('notes-data.json')
+    // notes = JSON.parse(notesString)
+    notes = readNotes()
   } catch (e) {
 
   }
 
-  var duplicateNotes = notes.filter((note) => note.title === title);
+  const duplicateNotes = notes.filter((note) => note.title === title)
 
   if (duplicateNotes.length === 0) {
-    notes.push(note);
-    fs.writeFileSync('notes-data.json', JSON.stringify(notes));
+    notes.push(note)
+    fs.writeFileSync('notes-data.json', JSON.stringify(notes))
   }
-};
+}
 
-var getAll = () => {
-  console.log('Getting all notes');
-};
+const getAll = () => {
+  console.log('Getting all notes。。。')
+  notes = readNotes()
+  notes.forEach((note) => {
+    console.log(`Title: ${note.title}`)
+  })
+}
 
-var getNote = (title) => {
-  console.log('Getting note', title);
-};
+const getNote = (title) => {
+  // console.log('Getting note', title)
+  // var notesString = fs.readFileSync('notes-data.json')
+  // notes = JSON.parse(notesString)
+  notes = readNotes()
+  note = notes.filter((note) => note.title === title)
+  if (note[0] !== undefined) {
+    console.log('Getting note。。。', note[0].title)
+  } else {
+    console.log(`Title ${title} cannot be found!`)
+  }
+}
 
-var removeNote = (title) => {
-  console.log('Removing note', title);
-};
+const removeNote = (title) => {
+  console.log('Removing note', title)
+  //notes.splice()
+}
 
+const readNotes = () => {
+  const notesString = fs.readFileSync('notes-data.json')
+  return JSON.parse(notesString)
+}
 module.exports = {
   addNote,
   getAll,
   getNote,
   removeNote
-};
+}
