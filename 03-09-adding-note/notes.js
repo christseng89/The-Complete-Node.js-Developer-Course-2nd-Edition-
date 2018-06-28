@@ -51,9 +51,14 @@ const removeNote = (title) => {
 }
 
 const readNotes = () => {
-  const notesString = fs.readFileSync('notes-data.json')
-  return JSON.parse(notesString)
+  try {
+    const notesString = fs.readFileSync('notes-data.json')
+    return JSON.parse(notesString)
+  } catch (e) {
+    return [];
+  }
 }
+
 module.exports = {
   addNote,
   getAll,
