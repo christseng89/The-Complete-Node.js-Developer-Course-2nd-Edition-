@@ -8,8 +8,8 @@ const notes = require('./notes.js');
 
 const argv = yargs.argv;
 var command = argv._[0];
-console.log('Command: ', command);
-console.log('Yargs', argv);
+// console.log('Command: ', command);
+// console.log('Yargs', argv);
 
 if (command === 'add') {
   var note = notes.addNote(argv.title, argv.body);
@@ -19,7 +19,7 @@ if (command === 'add') {
     console.log(`Title: ${note.title}`);
     console.log(`Body: ${note.body}`);
   } else {
-    console.log('Note already exists');
+    console.log(`Note title '${argv.title}' already exists`);
   }
 } else if (command === 'list') {
   notes.getAll();
