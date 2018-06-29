@@ -1,0 +1,21 @@
+npm install
+node app.js add --title="Security" --body="Some Body here..."
+node app.js add --title="Security 2" --body="Some Body 2 here..."
+node app.js list
+node app.js read --title="Security"
+
+// Debugging node V8 ^
+node inspect list app.js
+    repl #to manipulate var etc.
+    c #continue
+    n #next line
+
+debugger #into statement
+nodemon app.js list #enable debugger and monitor simultenously...  
+
+// Debugging on Chrome
+node --inspect-brk list app.js
+chrome://inspect #Click Open dedicated DevTools for Node from Chrome
+
+nodemon --inspect-brk list app.js
+chrome://inspect
