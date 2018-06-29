@@ -31,9 +31,10 @@ var addNote = (title, body) => {
 var getAll = () => {
   console.log('Getting all notes。。。')
   notes = fetchNotes()
-  notes.forEach((note) => {
-    console.log(`Title: ${note.title}`)
-  })
+  // notes.forEach((note) => {
+  //   console.log(`Title: ${note.title}`)
+  // })
+  return notes
 }
 
 var getNote = (title) => {
