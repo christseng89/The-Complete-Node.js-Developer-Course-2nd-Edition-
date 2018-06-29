@@ -3,6 +3,7 @@ x.bat.bak
 vim.exe.stackdump
 package-lock.json
 server.log
+greetings.txt
 node_modules/
 config.json
 heroku_notes
