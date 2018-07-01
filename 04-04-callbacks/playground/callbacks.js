@@ -8,8 +8,16 @@ var getUser = (id, callback) => {
   callback(user)
 
   setTimeout(() => {
+    user.age = 21
+    user.id = 19
     callback(user)
-    console.log("Callback w timeout...")
+    console.log("Callback w timeout 1 sec...")  
+  }, 1000)
+
+  setTimeout(() => {
+    user.name = 'Andrew'
+    callback(user)
+    console.log("Callback w timeout 2 sec...")
   }, 3000)
   console.log("Hi!")
 }
