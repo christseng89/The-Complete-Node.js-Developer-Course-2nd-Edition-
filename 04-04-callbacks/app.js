@@ -8,7 +8,7 @@ const requestBody = (addr) => {
     console.log('statusCode:', response.statusCode)
     // console.log('Address 。。。', addr, JSON.stringify(body, undefined, 2))
     if (body.results[0] !== undefined) {
-    console.log('Address ', addr,'its location is ', body.results[0].geometry.location)
+      console.log('Address', addr, 'its location is', body.results[0].geometry.location)
     } else {
       console.log('Address cannot be accessed!')
     }
