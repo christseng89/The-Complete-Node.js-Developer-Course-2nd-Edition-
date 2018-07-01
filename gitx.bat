@@ -1,5 +1,5 @@
 cd %1*
-rd node_modules /s
+rd node_modules /s /q
 cd ..
 git commit -am "%1"
 git push
