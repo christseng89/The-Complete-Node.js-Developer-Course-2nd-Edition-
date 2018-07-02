@@ -1,4 +1,4 @@
-const request = require('request');
+const request = require('request')
 
 var getWeather = (lat, lng, callback) => {
   request({
@@ -6,18 +6,18 @@ var getWeather = (lat, lng, callback) => {
     json: true
   }, (error, response, body) => {
     if (error) {
-      callback('Unable to connect to Forecast.io server.');
+      callback('Unable to connect to Forecast.io server.')
     } else if (response.statusCode === 400) {
-      callback('Unable to fetch weather.');
+      callback('Unable to fetch weather.')
     } else if (response.statusCode === 200) {
       callback(undefined, {
         temperature: Math.round((body.currently.temperature - 32)*5/9),
         apparentTemperature: Math.round((body.currently.apparentTemperature - 32)*5/9)
-      });
+      })
     } else {
-      callback('Unable to fetch weather for unknown reason.');
+      callback('Unable to fetch weather for unknown reason.')
     }
-  });
-};
+  })
+}
 
-module.exports.getWeather = getWeather;
+module.exports.getWeather = getWeather
