@@ -1,6 +1,18 @@
+heroku login
+heroku keys:add
+heroku keys
+sss -v git@heroku.com
+
+//debug1: Authentication succeeded (publickey).
+//Authenticated to heroku.com ([50.19.85.132]:22).
+//debug1: channel 0: new [client-session]
+//debug1: Entering interactive session.
+//debug1: pledge: network
+//PTY allocation request failed on channel 0
+//shell request failed on channel 0
+
 cd ..
-git commit -am "07-22"
-git push
+gitx 07-22
 
 cd 07-22*
 git remote remove heroku
