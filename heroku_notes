@@ -17,6 +17,9 @@ gitx 07-22
 cd 07-22*
 git remote remove heroku
 heroku create
+git push heroku
+heroku open
+
 heroku addons:create mongolab:sandbox
 heroku config
 heroku config:set NAME=Chris
